@@ -63,7 +63,42 @@ function initiateSale(){
                     if(err) throw err;
                     console.log("Nice buy! Your total is $ "+ grandTotal.toFixed(2) + " "  + "PLEASE ALLOW UP TO 5 DAYS SHIPPING!");
                 });
+
+                connection.query("SELECT * FROM departments", function(err, deptRes){
+                    if (err) throw err;
+                    var index;
+                    for(var i = 0; i < deptRes.length; i++){
+                        if(deptRes[i].departmentName === res[itemsToBuy].departmentName){
+                            index = i;
+                        }
+                    }
+                    connection.query("UPDATE departments SET ? WHERE ?", [
+                        {totalSales: deptRes[index].totalSales + grandTotal},
+                        {departmentName: res[itemsToBuy].departmentName}
+                    ], function(err, deptRes){
+                        if (err) throw err;
+                    });
+                });
+            } else{
+                console.log("Sorry! We do not have enough stock to make your purchase!");
             }
+            reprompt();
         })
     })
 }
+
+function reprompt(){
+    inquirer.prompt([{
+        type: "confirm",
+        name: "reply",
+        message: "Would you like to purchase another item?"
+    }]).then(function(ans){
+        if(ans.reply){
+            initiateSale();
+        } else {
+            console.log("Thank you for Stopping by, Please come back!")
+        }
+    });
+}
+
+initiateSale();
