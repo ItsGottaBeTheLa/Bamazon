@@ -5,12 +5,12 @@ create database bamazon_db;
 use bamazon_db;
 
 create table products (
-	itemid integer auto_increment not null,
+	itemID integer auto_increment not null,
     productname varchar(45) not null,
     departmentname varchar(45) not null,
     price decimal(10, 2) not null,
     stockquantity integer (10) not null,
-    primary key (itemid)
+    primary key (itemID)
 );
 
 insert into products(productname, departmentname, price, stockquantity)
