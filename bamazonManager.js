@@ -122,7 +122,7 @@ function addNewProduct(){
     console.log("You now have the ability to add a new product");
     var deptName = [];
 
-    connection.query('SELECT * FROM departments', function(err, res){
+    connection.query('SELECT * FROM products', function(err, res){
         if(err) throw err;
         for(var i = 0; i < res.length; i++){
             deptName.push(res[i].departmentname);
