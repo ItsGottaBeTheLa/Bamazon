@@ -4,11 +4,11 @@ The goal was to create an Amazon-like store front using Node.js and a MySQL data
 # Getting Started
 
 - Clone repo.
-- Run command in Terminal or Gitbash 'npm install'
+- Run command in Terminal or Gitbash 'npm install -i'
 - Run command depending which mode you would like to be on:
-- Customer - 'npm run customer'
-- Manager - 'npm run manager'
-- Exective - 'npm run exective'
+- Customer - 'node bamazonCustomer.js'
+- Manager - 'node bamazonMabager.js'
+- Supervisor - 'node bamazonSupervisor.js'
 - Run 'ctrl + c' to exit each mode
 
 # What Each Does

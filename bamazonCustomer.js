@@ -17,7 +17,7 @@ connection.connect(function(err) {
 });
 
 function initiateSale(){
-    connection.query('SELECT * FROM Products', function(err, res){
+    connection.query('SELECT * FROM products', function(err, res){
         if(err) throw err;
 
         for(var i = 0; i <res.length; i++){
