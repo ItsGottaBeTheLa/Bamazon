@@ -41,7 +41,7 @@ function viewProductByDept(){
         console.log("---------------------------------------------");
 
         for(var i = 0; i <res.length; i++){
-            console.log("ID: " + res[i].departmentID + " " + "DepartmentName: " + res[i].departmentName + " " + "Over Head Costs: " + (res[i].overHeadCost),toFixed(2) + " " + "Product Sales " + (res[i].totalSales).toFixed(2) + " " + "Total Profit: " +(res[i].totalSales - res[i].overHeadCost).toFixed(2));
+            console.log("ID: " + res[i].departmentID + " " + "DepartmentName: " + res[i].departmentName + " " + "Over Head Costs: " + (res[i].overHeadCost).toFixed(2) + " " + "Product Sales " + (res[i].totalSales).toFixed(2) + " " + "Total Profit: " +(res[i].totalSales - res[i].overHeadCost).toFixed(2));
             console.log("------------------------------------------------------------------------------------------");
         }
         initiatePro();
