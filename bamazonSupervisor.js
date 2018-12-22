@@ -62,7 +62,7 @@ function createNewDept(){
             message: "Over Head Cost: ",
             default: 0,
             validate:function(val){
-                if(NaN(val) === false){return true;}
+                if(isNaN(val) === false){return true;}
                 else{return false;}
             }
         },{
