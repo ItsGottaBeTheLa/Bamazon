@@ -92,8 +92,8 @@ function reprompt(){
         type: "confirm",
         name: "reply",
         message: "Would you like to purchase another item?"
-    }]).then(function(ans){
-        if(ans.reply){
+    }]).then(function(cart){
+        if(cart.reply){
             initiateSale();
         } else {
             console.log("Thank you for Stopping by, Please come back!")
@@ -101,4 +101,3 @@ function reprompt(){
     });
 }
 
-initiateSale();
