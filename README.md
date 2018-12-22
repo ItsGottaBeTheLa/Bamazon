@@ -2,13 +2,14 @@
 The goal was to create an Amazon-like store front using Node.js and a MySQL database.
 
 # Getting Started
-Clone repo.
-Run command in Terminal or Gitbash 'npm install'
-Run command depending which mode you would like to be on:
-Customer - 'npm run customer'
-Manager - 'npm run manager'
-Exective - 'npm run exective'
-Run 'ctrl + c' to exit each mode
+
+- Clone repo.
+- Run command in Terminal or Gitbash 'npm install'
+- Run command depending which mode you would like to be on:
+- Customer - 'npm run customer'
+- Manager - 'npm run manager'
+- Exective - 'npm run exective'
+- Run 'ctrl + c' to exit each mode
 
 # What Each Does
 
@@ -29,11 +30,11 @@ It will also update the product sales in the department MySQL database table.
 
 Starts with a menu:
 
-View Products for Sale
-View Low Inventory
-Add to Inventory
-Add New Product
-End Session
+- View Products for Sale
+- View Low Inventory
+- Add to Inventory
+- Add New Product
+- End Session
 
 If the manager selects View Products for Sale, it lists all of the products in the store including all of their details.
 
@@ -49,9 +50,12 @@ If the manager selects End Session, it ends the session and doesn't go back to t
 
 Starts with a menu:
 
-View Product Sales by Department
-Create New Department
-End Session
+
+- View Product Sales by Department
+
+- Create New Department
+
+- End Session
 
 If the manager selects View Product Sales by Department, it lists the Department Sales and calculates the total sales from the overhead cost and product sales.
 
@@ -71,6 +75,9 @@ If the manager selects End Session, it ends the session and doesn't go back to t
 - Create a MYSQL database called 'Bamazon', reference schema.sql
 
 # Built With
-Visual Studio Code - Text Editor
-MySQL/MySQLWorkbench
-Terminal/Gitbash
+
+- Visual Studio Code - Text Editor
+
+- MySQL/MySQLWorkbench
+
+- Terminal/Gitbash
